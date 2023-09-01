@@ -26,10 +26,10 @@ public class JilaCaller
         Map<String, ArrayList<String>> tags = parser.tagger(key);
     }
 
-    public String get(String key)
+    public String get(String key, String tag)
     {
         Map<String, ArrayList<String>> tags = parser.tagger(key);
-        return tags.get("val").get(0);
+        return tags.get(tag).get(0);
     }
 
     public void set(String key, String value)
